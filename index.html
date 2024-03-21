@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WATCH OUT!(feat.사이비)</title>
+	<style type="text/css">
+
+		@font-face {
+    font-family: 'YdestreetB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/YdestreetB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+		@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;}
+
+		body, h1, h2, p {margin:0;}
+		body{background: greenyellow;}
+		html{font-family: 'pretendard-regular';line-height: 1.7 }
+		header{padding-bottom: 150px; text-align: center; background: greenyellow;}
+		section{margin-left: 30px; margin-right: 30px; padding-top: 80px; padding-bottom: 80px;background: beige; border-radius: 20px; }
+		h1{margin: auto; text-align: center; padding-top: 160px; padding-bottom: 20px; font-size: 15rem; font-family:'YdestreetB'; line-height: 0.9; background: greenyellow;}
+		h2{padding-top: 10px; padding-bottom: 20px;  font-family: 'YdestreetB'; font-size: 3rem; text-align: center}
+		p{font-size: 1.1rem}
+		footer{padding-top: 40px; font-size: 0.8rem;}
+		img{width: 100%;}
+
+		/*기본설정*/
+		.wrap{width: 1000px; 
+			margin: auto;}
+		.subtitle{font-family: 'YdestreetB'; font-size: 2rem;}
+	 	.left-spacing{color: #3A3A3A; padding-left: 170px; padding-right: 170px; margin: 0 auto;}
+
+	 	/*이미지들*/
+		.one{width: 15%;
+		position: absolute;
+		top: 130px;
+		left: 170px;
+		z-index: 1;
+	 	transform: rotate(-13deg);}
+	 	
+		.two {width: 15%;
+		position: absolute; 
+		top: 300px;
+		left: 1200px;
+		z-index: 1;
+	 	transform: rotate(40deg);}
+
+
+	 	.test {width: 100%;}
+
+	 	.img{background-image: url('smilegirl.png'); 
+    		background-attachment: fixed;  background-size: contain;
+    		background-repeat: no-repeat; width: 100%;height: auto; padding: 500px 0 500px 0; mix-blend-mode: multiply;}
+
+	 	/*채팅효과 구현*/
+	 	.gy-back{margin-bottom: 50px; margin-top: 50px; background-color:#BDD1DC;}
+	 	.message-box { background-color: greenyellow;
+	    	margin: 30px;
+				margin-left: 100px;
+				padding-left: 20px;
+				padding-right: 20px;
+	    	padding: 10px;
+	    	border-radius: 15px;
+				display: inline-block;
+				}
+	    
+	    .message-box-right {
+	    	margin: 10px;
+				margin-right: 100px;
+				padding-left: 20px;
+				padding-right: 20px;
+				padding: 10px;
+				border-radius: 15px;
+		    background-color: greenyellow;
+		    display: inline-block; 
+		    float: right;
+				}
+
+
+				.mb { 
+				margin: 30px;
+				margin-left: 50px;
+				padding-left: 20px;
+				padding-right: 20px;
+				border-radius: 15px;
+				background-color: beige;
+	    	padding: 10px;
+				display: inline-block;
+				}
+	    
+	    .mb-right {
+	    	margin: 30px;
+				margin-right: 50px;
+				padding-left: 20px;
+				padding-right: 20px;
+				border-radius: 15px;
+		    background-color: #F5D800;
+		    padding: 10px;
+		    display: inline-block; 
+		    float: right;
+				clear: right;
+				}
+
+		.end{background-color: greenyellow;}
+
+		 /*애니메이션*/
+
+		.shake {
+  animation: shake 0.5s ease infinite; /* shake 애니메이션을 적용하고, 무한 반복하도록 설정 */}
+
+	@keyframes shake {
+	  0% { transform: translateX(0); } /* 애니메이션 시작 지점 */
+	  25% { transform: translateX(-5px); } /* 25% 시간이 지난 지점의 변화 */
+	  50% { transform: translateX(5px); } /* 50% 시간이 지난 지점의 변화 */
+	  75% { transform: translateX(-5px); } /* 75% 시간이 지난 지점의 변화 */
+	  100% { transform: translateX(0); } /* 애니메이션 종료 지점 */
+		}
+
+	.hoverimg:hover {
+    transform: scale(1.3); /* 마우스 오버 시 이미지 크기를 110%로 확대 */
+    transition: transform 0.3s ease; /* 부드러운 애니메이션 효과를 위한 transition 속성 추가 */}
+
+    .glitch-text {
+    font-size: 15rem;
+    font-family: 'YdestreetB';
+    color: black;
+    line-height: 0.9;
+    animation: glitch-animation 0.1s infinite alternate;
+    z-index: 0;
+    text-shadow: 
+      5px 0px 0px rgba(255, 0, 0, 0.8), /* 빨간색 그림자 */
+      -5px 0 0px rgba(0, 0, 255, 5); /* 파란색 그림자 */
+	}
+
+@keyframes glitch-animation {
+    0% {transform: translateX(0);}
+    20% {transform: translateX(2px);}
+    40% {transform: translateX(-2px);}
+    60% {transform: translateX(2px);}
+    80% {transform: translateX(-2px);}
+    100% {transform: translateX(0);}
+	}
+
+	/* 이미지 컨테이너 */
+.image-container {
+    position: relative;
+    width: 200px; /* 이미지 컨테이너의 너비 */
+    height: auto;
+    margin: auto;
+}
+
+/* 호버 이미지 */
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* 초기에 숨김 */
+    transition: opacity 0.3s ease; /* 부드러운 전환을 위한 transition 효과 */
+}
+
+/* 이미지 컨테이너에 호버했을 때 */
+.image-container:hover .hover-image {
+    opacity: 1; /* 호버시 이미지 표시 */
+}
+
+.flexcard{display: flex; justify-content: space-between;}
+
+     /*네비게이션*/
+
+     .nav{width: 1000px; height: 100px; left: 50%; transform: translateX(-50%); position: fixed; z-index: 2;}
+     .flex{display: flex; justify-content: space-between; padding-top: 10px}
+     .logo{font-family: 'YdestreetB'; font-size: 1.4rem; line-height: 1.4;}
+     .menu{width: 500px;}
+     .menu li {list-style-type: none; }
+     .menu li a{display:block; text-decoration: none; color: black; font-family: 'pretendard-regular'}
+     .menu li a:hover{opacity: 50%;}
+
+     .footer{width: 1000px; height: 250px; left: 50%; margin: auto;}
+     .flex2{display: flex; justify-content: space-between; padding-top: 10px}
+      .logo2{font-family: 'YdestreetB'; font-size: 1.8rem; line-height: 1.4;}
+     .mn{width: 500px;}
+     .mn li {list-style-type: none;}
+     .mn li a{display:block; text-decoration: none; color: black; font-family: 'pretendard-regular'}
+     .mn li a:hover{opacity: 50%;}}
+
+
+
+
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="nav flex">
+		<div class="logo flex"> WATCH<br>OUT!</div>
+			<ul class="menu flex">
+			<li> <a href="#a">(ABOUT ME)</a></li>
+			<li> <a href="#b"> (STORY)</a></li>
+			<li><a href="#c">(BEHIND)</a></li>
+			</ul>
+		</div>
+	</nav>
+	<header>
+		<div class="wrap">
+			<h1 class="glitch-text">WATCH OUT!</h1>
+			<p class="subtitle">(feat.사이비)</p2> 
+			<img class="one hoverimg" src="watchout1.png">
+			<img class="two hoverimg" src="watchout2.png">
+		</div>
+	</header>
+	<section>
+		<div class="wrap">
+			<div id="a" class="shake">
+			<img src="watchout3.png">
+			</div>
+			<h2>“학생, 여기 어떻게 가는지 알아요?”</h2>
+			<p class="left-spacing">“대학생 대상 설문조사 하고 있는데 잠깐만 참여해주세요~” <br>일주일에 세 번 이상 외출하지 않는 걸 원칙으로 삼을 정도로 집순이인 나. 어쩌다 한 번씩 사람 많은 지하철역 쪽으로 외출하면,모르는 사람들이 꼭 나에게 말을 건다. 잠깐 멍하니 있으면 <br>그들은 본론을 꺼내기 시작한다.</p>
+			<p class="message-box"> “혹시 천간살 있다는 이야기… 못 들어봤어요?”</p><br>
+			<p class="message-box-right">“저희가 동아리에서 연극하고 있는데 공연같은 거 있으면 연락드려도 될까요? 연락처 좀…”</p><br>
+			<p class="message-box">“돈 좀 빌려주실 수 있으세요?”
+			</p>
+			<p class="left-spacing">
+				아! 또 이상한 사람한테 걸렸구나. 말 걸면 걸던 대로 다 받아주던 시절도 잠시. 길거리에서 그런식으로 5시간쯤 허비하고 나니 길에서 타겟을 물색하는 사람들을 보면 무표정을 짓고 지나가기 시작했다. 해맑게 웃어서는 거친 길 위에서 살아남을 수 없다.
+				<br>“종교 있으세…”<br>
+				“죄송합니다! 제가 지금 급히 버스를 타야해서요.”<br>
+				말을 거는 사람이 있어도 단호하게 거절하고 지나갈 수 있게 되었다. 그러나 수많은 경험으로 <br>단련된 나도 피하지 못한 사이비가 존재한다.</p>
+		</div>
+	</section>
+	<section>
+    <div class="wrap">
+        <div class="flexcard">
+            <div class="image-container">
+                <img src="card4.png" alt="Original Image">
+                <img class="hover-image" src="card1.png" alt="Hover Image">
+            </div>
+            <div class="image-container">
+                <img src="card4.png" alt="Original Image">
+                <img class="hover-image" src="card2.png" alt="Hover Image">
+            </div>
+            <div class="image-container">
+                <img src="card4.png" alt="Original Image">
+                <img class="hover-image" src="card3.png" alt="Hover Image">
+            </div>
+        </div>
+    </div>
+</section>
+	<section>
+		<div id="b" class="wrap">
+			<img src="people.png">
+			<h2>친절한 사이비씨</h2>
+			<p class="left-spacing">미술학원에서 보조 선생님으로 알바를 하던 겨울이었다. 학생들이 그린 그림을 학원 앞 <br>사람들이 많이 오가는 길거리에 전시하게 되었다. 선생님들이 돌아가며 전시장을 지켜야해서 나 역시 전시장에 나가있었다.<br>“어머 아이들 그림이 너무 예쁘네요~ 직접 그린 건가요? 학생 실력이 아니다. 잘하네.”<br>
+			핫팩을 꼭 쥐고 그림에 이상은 없나 둘러보고 있는데, 직장룩을 멋지게 차려입은 여성분이<br> 이야기를 걸어왔다. 학생들이 열심히 그린 그림을 인정받았다는 생각에 흐뭇해져서 경계심이 <br>스르륵 사라졌다.<br><br>
+			<p class="left-spacing">“약속이 꼬여서 우연히 이쪽에 내리게 됐는데, 전시 하는 거 보고 반가워서 둘러보게 됐네요. <br>사실 저도 미대 나와서 전시 기획 하거든요.”<br>
+			“아 정말요? 지금 진행하고 있는 전시 있으세요?”<br>
+			“네, 이것도 인연인데 전시 보는 거에 관심 있으시면 보러 오실래요? 제가 설명해 드릴게요.”<br>
+			나중에 카카오톡으로 전시 정보를 보내주겠다는 말에 연락처를 교환했다. 우연하게 만들어진 <br>새로운 인연에 두근거렸다.</p>
+		</div>
+	</section>
+	<section>
+		<div class="wrap">
+			<h2>우연히 내게 오나봐</h2>
+			<p class="left-spacing">설렜던 것도 잠시, 몇 주간 카톡을 주고받지 않아 연락처를 주고 받았다는 사실조차 잊어가고 <br>있을 쯤이었다. 갑자기 카톡알람이 울렸다.</p>
+			<div class="gy-back">
+				<p class="mb">그동안 잘 지내셨나요? 제가 저번에 진행하던 전시는 마무리돼서<br> 다음 전시 때나 보여드릴 수 있을 것 같아요ㅠㅜ <br>사실 제가 심리상담도 함께 기획하고 있는데, 관심 있으시면 한 번 받아보실래요?</p>
+				<p class="mb-right">심리상담이면 제가 상담 센터를 가거나 해야하는 건가요?</p>
+				<p class="mb">아뇨! 예린 씨가 편하신 곳에서 만나면 될 것 같아요. 카페 같은 곳도 괜찮고. OO 스타벅스 어떠세요?</p>
+				<br><p class="mb-right">음……. 좋아요!</p>
+				<br><br><br><br><p class="mb">다른 한 분도 상담 받아보고 싶다고 요청하셔서, 혹시 같이 진행해도 될까요? 제 지인이에요.</p>
+			</div>
+			<p class="left-spacing"> “네, 저는 상관없어요.” <br>심리상담을 아무데서나 진행해도 괜찮은 걸까? 잠시 의문이 들었지만, 늘 사람이 많은 곳이니 <br>이상하면 바로 자리를 뜨면 괜찮을 거라는 마음으로 약속 장소에 나갔다.
+			약속날이 되자, 두 사람과 카페에서 만나 음료와 케이크를 먹으며 각자 뭘 하고 있는지 어떤 성격인지 이야기했다. <br>특이한 점은, 둘은 서로 친한 사이라고 소개했는데도 특별히 사적인 이야기를 하지 않고 모든<br> 이야기들을 나를 중심으로 풀어갔다. 동등하게 존중받는다고 느껴서 더 친해지고 싶었다.<br><br></p>
+			<img class="test hoverimg" src="test.png">
+			<br><br>
+			<p class="left-spacing">“자, 그러면 이제 심리 테스트를 시작해볼까요?”<br>
+			그림을 기반으로 한 테스트였는데, 그림을 그리자 나의 성향이나 기분에 대해서 서술해주었다. 당시에도 심리 상담가가 진행하는 활동이라고 하기엔 인터넷에 떠도는 심리상담과 크게 다를 게 없다고 생각했지만, 별 말 하지 않고 진행했다. 마지막으로 mbti 테스트와 비슷한 형식의 <br>상담지를 작성하고 헤어졌다.<br>
+			“다음에 또 만나요! 그 때 심리상담 결과 알려줄게요.”</p>
+		</div>
+	</section>
+	<section class="end"> 
+		<div id="c" class="wrap">
+			<h2>밝혀진 진실</h2>
+		</div>
+	</section>
+				<div class="img wrap">
+					<br>
+				</div>
+				<img src="warning.png"><br><br>
+		<section class="end">
+			<div class="wrap">
+			<p class="left-spacing">돌아와서 이 우연이 만들어낸 인연이 재미있어서 친구에게 전화를 걸어 조잘조잘 이야기했더니, 친구의 목소리가 점점 어두워지기 시작했다.<p/>
+			<p class="left-spacing"><br>“야, 너 그 테스트 내용 좀 자세하게 말해봐.”<br>
+			구체적으로 어떤 내용인지 말해주니, 친구가 한숨을 푹 쉬더니 나지막히 말했다.
+			<br>“내가 본 사이비 수법이랑 완전 똑같은데? 링크 보내줬으니 확인해봐라.”<br>
+			링크를 확인하자, 어떤 테스트인지 토씨 하나 틀리지 않고 똑같아서 소름이 돋았다. 약속 도중 <br>찜찜했지만 모른척 하고 있었던 말들이 하나씩 떠오르기 시작했다.<br><br>“종교 있으세요? 저희 둘은 교회 친구거든요.”<br>
+			“이게 저희가 아직 개발중인 프로그램인데, 원래 유료인 프로그램인데 무료로 해드리는 <br>거거든요. 어디에 내용 막 말하면 안돼요.”<br>
+			“이거는 종교에 관한 심리거든요.”<br> “신기하네요! 저는 기독교인이라 십자가 나왔나봐요.”<br>
+			상담지에 있던 종교와 관련된 문항들까지 쏙쏙 떠오르면서 내가 사이비에 당했다는 확신을 얻었다. 나를 배려해서 사적인 얘기를 하지 않은 게 아니라, 하지 못한 거였구나.
+			<br>“헐! 내 아까운 시간……. 그래도 네가 알려줘서 다행이다. 아니면 다음에도 만날 뻔."<br>
+			<br>“너는 돈 같은 거 빌려줄 때 꼭 주변 사람들한테 물어봐라… 사기 당하기 딱 좋다.”<br>
+			 그 이후로는 아무리 좋은 인상을 가진 사람이어도 처음 보는 사이에 함부로 따라가지도 연락처를 알려주지도 않는다. 사람이 주는 느낌은 지극히 주관적인 것이고, 그 사람이 어떤 속마음을 가졌는가까지는 알 수 없다는 것을 절절히 깨달았으니까.</p>
+		</div>
+
+</section>
+	<footer>
+		<div class="footer flex2">
+		<div class="logo2 flex2"> WATCH<br>OUT!</div>
+			<ul class="mn flex2">
+			<li> (CONTACT) <br><br> Yerin You <br> @yulmu <br> yerin6302@naver.com </li>
+			<li> (PAGES)<br><br><a href="#a">ABOUT ME</a> <a href="#b"> STORY</a> <a href="#c">BEHIND</a></li>
+			<li></li>
+			</ul>
+		</div>
+		<div class="wrap footerstyle">
+			낯선 사람을 함부로 따라가면 안돼요(feat.사이비)&copy;2024 유예린 제작. 이미지는 freepik 출처의 자료들을 가공하였습니다.
+		</div>
+	</footer>
+</body>
+</html>
